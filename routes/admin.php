@@ -1,10 +1,15 @@
 <?php
 
 
-use App\Http\Controllers\Admin\AdminController;
-use App\Http\Controllers\Admin\AuthController;
-use Illuminate\Support\Facades\Artisan;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\{
+    AdminController,
+    AuthController,
+    PageContentController
+};
+use Illuminate\Support\Facades\{
+    Artisan,
+    Route
+};
 
 Route::group(['prefix'=>'admin'],function (){
     Route::get('login', [AuthController::class,'index'])->name('admin.login');
@@ -25,6 +30,10 @@ Route::group(['prefix'=>'admin','middleware'=>'auth:admin'],function (){
     Route::POST('delete_admin',[AdminController::class,'delete'])->name('delete_admin');
     Route::get('my_profile',[AdminController::class,'myProfile'])->name('myProfile');
     Route::get('logout', [AuthController::class,'logout'])->name('admin.logout');
+
+    #============================ My Information ====================================
+    Route::get('my_information', [PageContentController::class, 'showInformation'])->name('showInformation');
+    Route::post('update_information/{id}', [PageContentController::class, 'updateInformation'])->name('updateInformation');
 });
 
 

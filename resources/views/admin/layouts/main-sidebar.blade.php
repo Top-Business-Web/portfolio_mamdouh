@@ -22,12 +22,12 @@
             </a>
         </li>
         
-        {{-- <li class="slide">
-            <a class="side-menu__item" href="">
+        <li class="slide">
+            <a class="side-menu__item" href="{{ route('showInformation') }}">
                 <i class="fa fa-wrench side-menu__icon"></i>
-                <span class="side-menu__label">الاعدادات</span>
+                <span class="side-menu__label">معلوماتي</span>
             </a>
-        </li> --}}
+        </li>
 
     </ul>
 </aside>

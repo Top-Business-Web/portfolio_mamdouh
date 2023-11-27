@@ -201,7 +201,7 @@
                 },
                 error: function (data) {
                     if (data.status === 500) {
-                        toastr.error('هناك خطأ ما ..');
+                        toastr.error('هناك خطأ ما1 ..');
                     } else if (data.status === 422) {
                         var errors = $.parseJSON(data.responseText);
                         $.each(errors, function (key, value) {

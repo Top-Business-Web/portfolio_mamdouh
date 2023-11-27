@@ -15,12 +15,14 @@ class CreatePageContentsTable extends Migration
     {
         Schema::create('page_contents', function (Blueprint $table) {
             $table->id();
+            $table->string('image_owner', 255);
             $table->json('name_owner');
             $table->json('description_owner');
             $table->integer('customers');
             $table->integer('years_experience');
             $table->integer('best_customers');
             $table->integer('project_successfully');
+            $table->string('image_description', 255);
             $table->json('description_about');
             $table->timestamps();
         });
