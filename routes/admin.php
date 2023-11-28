@@ -4,6 +4,7 @@
 use App\Http\Controllers\Admin\{
     AdminController,
     AuthController,
+    ContactController,
     PageContentController
 };
 use Illuminate\Support\Facades\{
@@ -34,6 +35,10 @@ Route::group(['prefix'=>'admin','middleware'=>'auth:admin'],function (){
     #============================ My Information ====================================
     Route::get('my_information', [PageContentController::class, 'showInformation'])->name('showInformation');
     Route::post('update_information/{id}', [PageContentController::class, 'updateInformation'])->name('updateInformation');
+
+    #============================ Contact ====================================
+    Route::get('contacts', [ContactController::class, 'showContacts'])->name('showContacts');
+    Route::post('delete_contact', [ContactController::class, 'deleteContact'])->name('deleteContact');
 });
 
 
