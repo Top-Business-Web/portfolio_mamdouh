@@ -29,6 +29,13 @@
             </a>
         </li>
 
+        <li class="slide">
+            <a class="side-menu__item" href="{{ route('showContacts') }}">
+                <i class="fa fa-wrench side-menu__icon"></i>
+                <span class="side-menu__label">جهات الاتصال</span>
+            </a>
+        </li>
+
     </ul>
 </aside>
 

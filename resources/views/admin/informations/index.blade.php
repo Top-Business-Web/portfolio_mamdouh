@@ -86,7 +86,7 @@
                                                 name="project_successfully">
                                         </div>
                                     </div>
-                                    <div class="container">
+                                    <div class="container">git push --set-upstream origin humsi
                                         <div class="row">
                                             <div class="col-12">
                                                 <label for="name" class="form-control-label"> وصف المالك: </label>
