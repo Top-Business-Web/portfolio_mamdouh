@@ -83,7 +83,7 @@ class ProjectController extends Controller
 
     private function processProjectData(ProjectStoreRequest $request): array
     {
-        $data = $request->only(['title', 'classification']);
+        $data = $request->only(['image', 'title', 'classification']);
         $data['title'] = json_encode($request->title);
         $data['classification'] = json_encode($request->classification);
 
