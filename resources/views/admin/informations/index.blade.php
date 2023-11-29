@@ -40,8 +40,7 @@
                                     <div class="row">
                                         <div class="col-12">
                                             <label for="name" class="form-control-label">صورة: </label>
-                                            <input type="file" class="dropify" name="image_owner" data-default-file=""
-                                                value="{{ asset($informations->image_owner) }}"
+                                            <input type="file" class="dropify" name="image_owner" data-default-file="{{ asset('storage/' . $informations->image_owner) }}"
                                                 accept="image/png,image/webp , image/gif, image/jpeg,image/jpg" />
                                             <span class="form-text text-danger text-center">مسموح فقط بالصيغ التالية : png,
                                                 gif,
@@ -110,8 +109,8 @@
                                     <div class="row">
                                         <div class="col-12">
                                             <label for="name" class="form-control-label">صورة من نحن: </label>
-                                            <input type="file" class="dropify" name="image_description" data-default-file="{{ asset('assets/admin/images/owner.svg') }}"
-                                                value=""
+                                            <input type="file" class="dropify" name="image_description" data-default-file="{{ asset('storage/' . $informations->image_description) }}"
+                                                value="{{ asset('storage/' . $informations->image_description) }}"
                                                 accept="image/png,image/webp , image/gif, image/jpeg,image/jpg" />
                                             <span class="form-text text-danger text-center">مسموح فقط بالصيغ التالية : png,
                                                 gif,
