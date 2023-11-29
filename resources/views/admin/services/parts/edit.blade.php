@@ -10,7 +10,7 @@
             <div class="row">
                 <div class="col-12">
                     <label for="name" class="form-control-label">ايقونة: </label>
-                    <input type="file" class="dropify" name="icon" data-default-file="" value=""
+                    <input type="file" class="dropify" name="icon" data-default-file="{{ asset('storage/'. $services->icon) }}" value=""
                         accept="image/png,image/webp , image/gif, image/jpeg,image/jpg" />
                     <span class="form-text text-danger text-center">مسموح فقط بالصيغ التالية : png,
                         gif,

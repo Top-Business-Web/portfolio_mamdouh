@@ -27,12 +27,14 @@ class PageContentController extends Controller
     {
         return PageContent::select(
             'id',
+            'image_owner',
             'name_owner',
             'description_owner',
             'customers',
             'years_experience',
             'best_customers',
             'project_successfully',
+            'image_description',
             'description_about'
         )->firstOrFail();
     }
@@ -57,14 +59,15 @@ class PageContentController extends Controller
     private function updateImage(UpdateInformationRequest $request, array &$inputs): void
     {
         if ($request->hasFile('image_owner')) {
-            $imagePath = $request->file('image_owner')->store('uploads/settings', 'public');
+            $imagePath = $request->file('image_owner')->store('uploads/page_content', 'public');
             $inputs['image_owner'] = $imagePath;
         } else {
             unset($inputs['image_owner']);
         }
 
         if ($request->hasFile('image_description')) {
-            $inputs['image_description'] = $request->input('image_description');
+            $imagePath = $request->file('image_description')->store('uploads/page_content', 'public');
+            $inputs['image_description'] = $imagePath;
         } else {
             unset($inputs['image_description']);
         }
