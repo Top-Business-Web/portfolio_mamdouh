@@ -27,8 +27,8 @@
         </form>
     </main>
     <div class="welcome-container">
-        <h1 class="heading-secondary">مرحبا بعودتك <span class="lg">{{($setting->title_ar) ?? 'تطبيق'}}</span></h1>
-        <img src="" alt="login" style="max-width:450px;mix-blend-mode: multiply">
+        <h1 class="heading-secondary">مرحبا بعودتك</h1>
+        <img src="{{ asset('assets/admin/assets/images/OFAF.gif')}}" alt="login" style="max-width:450px;mix-blend-mode: multiply">
     </div>
 </div>
 

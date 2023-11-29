@@ -24,22 +24,36 @@
         
         <li class="slide">
             <a class="side-menu__item" href="{{ route('showInformation') }}">
-                <i class="fa fa-wrench side-menu__icon"></i>
+                <i class="fa fa-question side-menu__icon"></i>
                 <span class="side-menu__label">معلوماتي</span>
             </a>
         </li>
 
         <li class="slide">
             <a class="side-menu__item" href="{{ route('contacts.index') }}">
-                <i class="fa fa-wrench side-menu__icon"></i>
+                <i class="fa fa-address-book side-menu__icon"></i>
                 <span class="side-menu__label">جهات الاتصال</span>
             </a>
         </li>
 
         <li class="slide">
             <a class="side-menu__item" href="{{ route('services.index') }}">
-                <i class="fa fa-wrench side-menu__icon"></i>
+                <i class="fa fa-list side-menu__icon"></i>
                 <span class="side-menu__label">الخدمات</span>
+            </a>
+        </li>
+
+        <li class="slide">
+            <a class="side-menu__item" href="{{ route('projects.index') }}">
+                <i class="fa fa-wrench side-menu__icon"></i>
+                <span class="side-menu__label">مشاريع</span>
+            </a>
+        </li>
+
+        <li class="slide">
+            <a class="side-menu__item" href="{{route('admin.logout')}}">
+                <i class="fa fa-lock side-menu__icon"></i>
+                <span class="side-menu__label">تسجيل الخروج</span>
             </a>
         </li>
 
