@@ -37,10 +37,10 @@ class serviceStoreRequest extends FormRequest
         return [
             "icon.sometimes" => "الايقونة مطلوبة",
             "icon.image" => "يجب ان تكون صورة",
-            "title_ar.required" => "العنوان مطلوب",
-            "title_en.required" => "العنوان مطلوب",
-            "description_ar.required" => "الوصف مطلوب",
-            "description_en.required" => "الوصف مطلوب",
+            "title.ar.required" => "العنوان مطلوب",
+            "title.en.required" => "العنوان مطلوب",
+            "description.ar.required" => "الوصف مطلوب",
+            "description.en.required" => "الوصف مطلوب",
         ];
     }
 }

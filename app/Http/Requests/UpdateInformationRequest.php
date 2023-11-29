@@ -44,12 +44,12 @@ class UpdateInformationRequest extends FormRequest
         return [
             "image_owner.sometimes" => "الصورة مطلوبة",
             "image_owner.image" => "يجب ان تكون صورة",
-            "name_owner_ar.required" => "الاسم بالعربي مطلوب",
-            "name_owner_ar.string" => "مسموح فقط بإدخال محارف",
-            "name_owner_en.required" => "الاسم بالإنجليزي مطلوب",
-            "name_owner_en.string" => "مسموح فقط بإدخال محارف",
-            "description_owner_ar.required" => "الوصف بالعربي مطلوب",
-            "description_owner_en.required" => "الوصف بالانكليزي مطلوب",
+            "name_owner.ar.required" => "الاسم بالعربي مطلوب",
+            "name_owner.ar.string" => "مسموح فقط بإدخال محارف",
+            "name_owner.en.required" => "الاسم بالإنجليزي مطلوب",
+            "name_owner.en.string" => "مسموح فقط بإدخال محارف",
+            "description_owner.ar.required" => "الوصف بالعربي مطلوب",
+            "description_owner.en.required" => "الوصف بالانكليزي مطلوب",
             "customers.required" => "حقل الزبائن مطلوب",
             "customers.integer" => "مسموح فقط بإدخال أرقام",
             "years_experience.required" => "حقل سنين الخبرة مطلوب",
@@ -60,8 +60,8 @@ class UpdateInformationRequest extends FormRequest
             "project_successfully.integer" => "مسموح فقط بإدخال أرقام",
             "image_description.sometimes" => "الصورة مطلوبة",
             "image_description.image" => "يجب ان تكون صورة",
-            "description_about_ar.required" => "وصف بالعربي ماذا عنا مطلوب",
-            "description_about_en.required" => "وصف بالإنجليزي ماذا عنا مطلوب",
+            "description_about.ar.required" => "وصف بالعربي ماذا عنا مطلوب",
+            "description_about.en.required" => "وصف بالإنجليزي ماذا عنا مطلوب",
         ];
     }
 }

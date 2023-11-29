@@ -24,18 +24,22 @@ class ProjectStoreRequest extends FormRequest
     public function rules()
     {
         return [
-            "image" => "sometimes|image",
-            "title" => "required",
-            "classification" => "required",
+            "image" => "required|image",
+            "title.ar" => "required",
+            "title.en" => "required",
+            "classification.ar" => "required",
+            "classification.en" => "required",
         ];
     }
 
     public function messages()
     {
         return [
-            "image.image" => "يجب ان تكون صورة",
-            "title.required" => "العنوان مطلوب",
-            "classification.required" => "التصنيف مطلوب",
+            "image.required" => "الصورة مطلوبة",
+            "title.ar.required" => "العنوان مطلوب",
+            "title.en.required" => "العنوان مطلوب",
+            "classification.ar.required" => "التصنيف مطلوب",
+            "classification.en.required" => "التصنيف مطلوب",
         ];
     }
 }
