@@ -12,8 +12,8 @@
                 <div class="card-body">
                     <div class="d-flex">
                         <div class="text-white">
-                            <h2 class="mb-0 number-font"></h2>
-                            <p class="text-white mb-0"> جميع المستخدمين</p>
+                            <h2 class="mb-0 number-font">{{ \App\Models\Admin::count() }}</h2>
+                            <p class="text-white mb-0"> جميع الادمن</p>
                         </div>
                         <div class="mr-auto">
                             <i class="fe fe-users text-white fs-30 ml-2 mt-2"></i>
@@ -27,11 +27,11 @@
                 <div class="card-body">
                     <div class="d-flex">
                         <div class="text-white">
-                            <h2 class="mb-0 number-font"></h2>
-                            <p class="text-white mb-0">السائقين</p>
+                            <h2 class="mb-0 number-font">{{ \App\Models\Contact::count() }}</h2>
+                            <p class="text-white mb-0">طلبات التواصل</p>
                         </div>
                         <div class="mr-auto">
-                            <i class="fa fa-car text-white fs-30 ml-2 mt-2"></i>
+                            <i class="fa fa-address-book text-white fs-30 ml-2 mt-2"></i>
                         </div>
                     </div>
                 </div>
@@ -42,12 +42,12 @@
                 <div class="card-body">
                     <div class="d-flex">
                         <div class="text-white">
-                            <h2 class="mb-0 number-font"></h2>
+                            <h2 class="mb-0 number-font">{{ \App\Models\Service::count() }}</h2>
                             </h2>
-                            <p class="text-white mb-0">الرحلات التي انجزت</p>
+                            <p class="text-white mb-0">الخدمات</p>
                         </div>
                         <div class="mr-auto">
-                            <i class="fe fe-check text-white fs-30 ml-2 mt-2"></i>
+                            <i class="fe fe-list text-white fs-30 ml-2 mt-2"></i>
                         </div>
                     </div>
                 </div>
@@ -58,26 +58,11 @@
                 <div class="card-body">
                     <div class="d-flex">
                         <div class="text-white">
-                            <h2 class="mb-0 number-font"></h2>
-                            <p class="text-white mb-0">الرحلات الجديدة</p>
+                            <h2 class="mb-0 number-font">{{ \App\Models\Project::count() }}</h2>
+                            <p class="text-white mb-0">المشاريع</p>
                         </div>
                         <div class="mr-auto">
-                            <i class="fa fa-plus text-white fs-30 ml-2 mt-2"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
-            <div class="card bg-danger img-card box-info-shadow">
-                <div class="card-body">
-                    <div class="d-flex">
-                        <div class="text-white">
-                            <h2 class="mb-0 number-font"></h2>
-                            <p class="text-white mb-0">سعر الكيلو</p>
-                        </div>
-                        <div class="mr-auto">
-                            <i class="fa fa-road text-white fs-30 ml-2 mt-2"></i>
+                            <i class="fa fa-wrench text-white fs-30 ml-2 mt-2"></i>
                         </div>
                     </div>
                 </div>
