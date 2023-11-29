@@ -18,7 +18,7 @@ class Project extends Model
     ];
 
     protected $casts = [
-        'title',
-        'classification',
+        'title' => 'json',
+        'classification' => 'json',
     ];
 }

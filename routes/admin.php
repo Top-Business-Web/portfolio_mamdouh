@@ -5,7 +5,8 @@ use App\Http\Controllers\Admin\{
     AdminController,
     AuthController,
     ContactController,
-    PageContentController
+    PageContentController,
+    ServiceController
 };
 use Illuminate\Support\Facades\{
     Artisan,
@@ -34,11 +35,19 @@ Route::group(['prefix'=>'admin','middleware'=>'auth:admin'],function (){
 
     #============================ My Information ====================================
     Route::get('my_information', [PageContentController::class, 'showInformation'])->name('showInformation');
-    Route::post('update_information/{id}', [PageContentController::class, 'updateInformation'])->name('updateInformation');
+    Route::post('update/information/{id}', [PageContentController::class, 'updateInformation'])->name('updateInformation');
 
     #============================ Contact ====================================
-    Route::get('contacts', [ContactController::class, 'showContacts'])->name('showContacts');
-    Route::post('delete_contact', [ContactController::class, 'deleteContact'])->name('deleteContact');
+    Route::get('contacts', [ContactController::class, 'showContacts'])->name('contacts.index');
+    Route::post('delete/contact', [ContactController::class, 'deleteContact'])->name('contacts.delete');
+
+    #============================ Services ====================================
+    Route::get('services', [ServiceController::class, 'showServices'])->name('services.index');
+    Route::get('services/create', [ServiceController::class, 'showCreate'])->name('services.create');
+    Route::post('services/store', [ServiceController::class, 'storeService'])->name('services.store');
+    Route::get('services/{id}/edit', [ServiceController::class, 'showEdit'])->name('services.edit');
+    Route::put('services/{id}/update', [ServiceController::class, 'updateService'])->name('services.update');
+    Route::post('services/delete', [ServiceController::class, 'deleteService'])->name('services.delete');
 });
 
 

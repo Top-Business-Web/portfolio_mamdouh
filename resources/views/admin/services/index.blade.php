@@ -1,23 +1,23 @@
 @extends('admin/layouts/master')
 
 @section('title')
-    {{($setting->name_en) ?? ''}} | جهات الاتصال
+    {{($setting->name_en) ?? ''}} |  الخدمات
 @endsection
-@section('page_name') جهات الاتصال @endsection
+@section('page_name')  الخدمات @endsection
 @section('content')
 
     <div class="row">
         <div class="col-md-12 col-lg-12">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title"> جهات الاتصال {{($setting->name_en) ?? ''}}</h3>
-                    {{-- <div class="">
+                    <h3 class="card-title">  الخدمات {{($setting->name_en) ?? ''}}</h3>
+                    <div class="">
                         <button class="btn btn-secondary btn-icon text-white addBtn">
 									<span>
 										<i class="fe fe-plus"></i>
 									</span> اضافة جديد
                         </button>
-                    </div> --}}
+                    </div>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -26,10 +26,9 @@
                             <thead>
                             <tr class="fw-bolder text-muted bg-light">
                                 <th class="min-w-25px">#</th>
-                                <th class="min-w-50px">الاسم</th>
-                                <th class="min-w-50px">الايميل</th>
-                                <th class="min-w-125px">الموضوع</th>
-                                <th class="min-w-125px">رسالة</th>
+                                <th class="min-w-50px">الايقونة</th>
+                                <th class="min-w-50px">العنوان</th>
+                                <th class="min-w-125px">الوصف</th>
                                 <th class="min-w-50px rounded-end">العمليات</th>
                             </tr>
                             </thead>
@@ -66,11 +65,11 @@
         <!-- MODAL CLOSED -->
 
         <!-- Create Or Edit Modal -->
-        <div class="modal fade" id="editOrCreate" data-backdrop="static" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog" role="document">
+        <div class="modal fade bd-example-modal-lg" id="editOrCreate" data-backdrop="static" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="example-Modal3">بيانات المشرف</h5>
+                        <h5 class="modal-title" id="example-Modal3">بيانات الخدمة</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -89,15 +88,20 @@
     <script>
         var columns = [
             {data: 'id', name: 'id'},
-            {data: 'name', name: 'name'},
-            {data: 'email', name: 'email'},
-            {data: 'subject', name: 'subject'},
-            {data: 'message', name: 'message'},
+            {data: 'icon', name: 'icon'},
+            {data: 'title', name: 'title'},
+            {data: 'description', name: 'description'},
             {data: 'action', name: 'action', orderable: false, searchable: false},
         ]
         // Show Data
-        showData('{{route('contacts.index')}}', columns);
+        showData('{{route('services.index')}}', columns);
         // Delete Using Ajax
-        deleteScript('{{route('contacts.delete')}}');
+        deleteScript('{{route('services.delete')}}');
+        // Add Using Ajax
+        showAddModal('{{route('services.create')}}');
+        addScript();
+        // Add Using Ajax
+        showEditModal('{{route('services.edit',':id')}}');
+        editScript();
     </script>
 @endsection

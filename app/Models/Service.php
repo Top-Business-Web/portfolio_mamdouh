@@ -16,9 +16,4 @@ class Service extends Model
         'title',
         'description',
     ];
-
-    protected $casts = [
-        'title',
-        'description',
-    ];
 }
