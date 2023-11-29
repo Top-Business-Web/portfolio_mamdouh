@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\{
     AuthController,
     ContactController,
     PageContentController,
+    ProjectController,
     ServiceController
 };
 use Illuminate\Support\Facades\{
@@ -43,11 +44,19 @@ Route::group(['prefix'=>'admin','middleware'=>'auth:admin'],function (){
 
     #============================ Services ====================================
     Route::get('services', [ServiceController::class, 'showServices'])->name('services.index');
-    Route::get('services/create', [ServiceController::class, 'showCreate'])->name('services.create');
-    Route::post('services/store', [ServiceController::class, 'storeService'])->name('services.store');
-    Route::get('services/{id}/edit', [ServiceController::class, 'showEdit'])->name('services.edit');
-    Route::put('services/{id}/update', [ServiceController::class, 'updateService'])->name('services.update');
-    Route::post('services/delete', [ServiceController::class, 'deleteService'])->name('services.delete');
+    Route::get('service/create', [ServiceController::class, 'showCreate'])->name('services.create');
+    Route::post('service/store', [ServiceController::class, 'storeService'])->name('services.store');
+    Route::get('service/{id}/edit', [ServiceController::class, 'showEdit'])->name('services.edit');
+    Route::put('service/{id}/update', [ServiceController::class, 'updateService'])->name('services.update');
+    Route::post('service/delete', [ServiceController::class, 'deleteService'])->name('services.delete');
+
+    #============================ Projects ====================================
+    Route::get('projects', [ProjectController::class, 'showProjects'])->name('projects.index');
+    Route::get('project/create', [ProjectController::class, 'showCreate'])->name('projects.create');
+    Route::post('project/store', [ProjectController::class, 'storeProject'])->name('projects.store');
+    Route::get('project/{id}/edit', [ProjectController::class, 'showEdit'])->name('projects.edit');
+    Route::put('project/{id}/update', [ProjectController::class, 'updateProject'])->name('projects.update');
+    Route::post('project/delete', [ProjectController::class, 'deleteProject'])->name('projects.delete');
 });
 
 

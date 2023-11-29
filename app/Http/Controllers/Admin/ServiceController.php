@@ -13,9 +13,11 @@ use Illuminate\Http\{
     Request
 };
 use Yajra\DataTables\DataTables;
+use App\Traits\PhotoTrait;
 
 class ServiceController extends Controller
 {
+    use PhotoTrait;
     // Function to fetch and display service data in a Blade view
     public function showServices(Request $request)
     {
@@ -36,7 +38,7 @@ class ServiceController extends Controller
             })
             ->editColumn('icon', function ($services) {
                 return '
-                <img alt="image" onclick="window.open(this.src)" class="avatar avatar-md rounded-circle" src="' . asset($services->logo) . '">
+                <img alt="image" onclick="window.open(this.src)" class="avatar avatar-md rounded-circle" src="' . asset('storage/' . $services->icon) . '">
                 ';
             })
             ->editColumn('title', function ($services) {
@@ -83,8 +85,10 @@ class ServiceController extends Controller
 
     private function processServiceData(ServiceStoreRequest $request): array
     {
-        $data = $request->only(['title', 'description']); // Adjust the fields accordingly
-
+        $data = $request->only(['icon' ,'title', 'description']); // Adjust the fields accordingly
+        $data['title'] = json_encode($request->title);
+        $data['description'] = json_encode($request->description);
+        
         if ($request->hasFile('icon')) {
             $imagePath = $request->file('icon')->store('uploads/services', 'public');
             $data['icon'] = $imagePath;
