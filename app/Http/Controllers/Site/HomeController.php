@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers\Site;
 
-use App\Http\Controllers\Controller;
+use Nette\Utils\Json;
+use App\Models\Contact;
 use App\Models\PageContent;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Nette\Utils\Json;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\ContactStoreRequest;
 
 class HomeController extends Controller
 {
@@ -37,5 +39,29 @@ class HomeController extends Controller
     {
         $projects = DB::table('projects')->select('id', 'image', 'title', 'classification')->get();
         return $projects;
+    }
+
+    public function storeContact(Request $request)
+    {
+        // Validate the form data
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'message' => 'required|string',
+        ]);
+
+        // Create a new Contact model instance
+        $contact = new Contact();
+        
+        // Set the model properties with the form data
+        $contact->name = $request->input('name');
+        $contact->email = $request->input('email');
+        $contact->message = $request->input('message');
+
+        // Save the model to the database
+        $contact->save();
+
+        // Return a JSON response indicating success
+        return response()->json(['code' => 200, 'message' => 'Data stored successfully']);
     }
 }

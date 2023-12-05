@@ -18,3 +18,6 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 
 Route::get('site', [HomeController::class, 'showPortfolio'])->name('portfolio.show');
+
+###### Contnact ######
+Route::post('contact/store', [HomeController::class, 'storeContact'])->name('contact.store');
