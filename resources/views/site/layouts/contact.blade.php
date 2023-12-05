@@ -41,19 +41,20 @@
             <div class="col-lg-7 col-12">
                 <form class="row form-contact">
                     <div class="col-md-6 col-sm-12 mb-4">
-                        <input type="text" class="w-100 edit-input" placeholder="الاسم" required>
+                        <input type="text" name="name" class="w-100 edit-input" placeholder="الاسم" required>
                     </div>
                     <div class="col-md-6 col-sm-12 mb-4">
-                        <input type="email" class="w-100 edit-input" placeholder="البريد الالكترونى" required>
+                        <input type="email" name="email" class="w-100 edit-input" placeholder="البريد الالكترونى"
+                            required>
                     </div>
                     <div class="col-12 mb-4">
-                        <input type="email" class="w-100 edit-input" placeholder="الموضوع" required>
+                        <input type="text" name="subject" class="w-100 edit-input" placeholder="الموضوع" required>
                     </div>
                     <div class="col-12">
-                        <textarea class="w-100 edit-input" placeholder="الرسالة" required></textarea>
+                        <textarea class="w-100 edit-input" name="message" placeholder="الرسالة" required></textarea>
                     </div>
                     <div class="col-12 mt-5">
-                        <button type="submit" class="btn">
+                        <button type="button" class="btn">
                             <a class="btn-start">
                                 <span>تواصل معنا</span>
                             </a>
@@ -85,3 +86,45 @@
         </div>
     </div>
 </section>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $('.btn-start').click(function() {
+            var form_data = $('.form-contact').serialize();
+
+            $.ajax({
+                type: 'POST',
+                url: '{{ route('contact.store') }}',
+                data: {
+                    form_data,
+                    "_token": "{{ csrf_token() }}",
+                },
+                success: function(data) {
+                    if (data.status == 200) {
+                        toastr.success('تم الاضافة بنجاح');
+                    } else if (data.status == 405) {
+                        toastr.error(data.mymessage);
+                    } else
+                        toastr.error('هناك خطأ ما ..');
+                },
+                error: function(data) {
+                    if (data.status === 500) {
+                        toastr.error('هناك خطأ ما ..');
+                    } else if (data.status === 422) {
+                        var errors = $.parseJSON(data.responseText);
+                        $.each(errors, function(key, value) {
+                            if ($.isPlainObject(value)) {
+                                $.each(value, function(key, value) {
+                                    toastr.error(value, 'خطأ');
+                                });
+                            }
+                        });
+                    } else
+                        toastr.error('هناك خطأ ما ..');
+                    $('#addButton').html(`اضافة`).attr('disabled', false);
+                }, //end error method
+            });
+        });
+    });
+</script>
