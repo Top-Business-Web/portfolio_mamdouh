@@ -131,6 +131,29 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="card">
+                                <div class="card-header" style="background-color: lightgray;">
+                                    <h3 class="card-title">قسم تواصل معنا</h3>
+                                </div>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <label for="name" class="form-control-label">الايميل</label>
+                                            <input type="text" value="{{ $informations->email }}" class="form-control" name="email">
+                                        </div>
+                                        <div class="col-6">
+                                            <label for="name" class="form-control-label">الهاتف</label>
+                                            <input type="text" value="{{ $informations->phone }}" class="form-control" name="phone">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <label for="name" class="form-control-label">العنوان</label>
+                                            <textarea name="address" id="address" class="form-control" rows="8">{{ $informations->address }}</textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="modal-footer">
@@ -154,6 +177,7 @@
         ClassicEditor.create(document.querySelector('#about_us_en'));
         ClassicEditor.create(document.querySelector('#description_owner_ar'));
         ClassicEditor.create(document.querySelector('#description_owner_en'));
+        ClassicEditor.create(document.querySelector('#address'));
 
         $('.dropify').dropify()
         editScript();

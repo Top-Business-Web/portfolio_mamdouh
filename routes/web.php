@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Site\HomeController;
 use Illuminate\Support\Facades\Route;
 use Laravel\Socialite\Facades\Socialite;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -16,4 +17,4 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 */
 
 
-// web
+Route::get('site', [HomeController::class, 'showPortfolio'])->name('portfolio.show');
