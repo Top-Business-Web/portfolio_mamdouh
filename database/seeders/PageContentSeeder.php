@@ -21,6 +21,9 @@ class PageContentSeeder extends Seeder
                     'ar' => 'محمد ممدوح',
                     'en' => 'Mohammed Mamdouh',
                 ]),
+                "email" => "mohammed.mamdouh@gmail.com",
+                "phone" => "+9714523123156",
+                "address" => "Dubai",
                 "description_owner" => json_encode([
                     'ar' => 'وكيل عقارى معتمد مرخص من دائرة الاراضى والاملاك فى دبى مختص فى بيع وشراء وتأجير العقارات',
                     'en' => 'A certified real estate agent licensed by the Dubai Land Department, specialized in buying, selling and renting real estate',

@@ -17,6 +17,9 @@ class CreatePageContentsTable extends Migration
             $table->id();
             $table->string('image_owner', 255);
             $table->json('name_owner');
+            $table->string('email', 255);
+            $table->string('phone', 255);
+            $table->text('address');
             $table->json('description_owner');
             $table->integer('customers');
             $table->integer('years_experience');

@@ -14,6 +14,9 @@ class PageContent extends Model
     protected $fillable = [
         'image_owner',
         'name_owner',
+        'email',
+        'phone',
+        'address',
         'description_owner',
         'customers',
         'years_experience',
