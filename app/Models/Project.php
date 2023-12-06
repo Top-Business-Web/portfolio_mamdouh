@@ -12,13 +12,8 @@ class Project extends Model
     protected $table = 'projects';
 
     protected $fillable = [
-        'image',
+        'images',
         'title',
         'classification',
     ];
-
-    // protected $casts = [
-    //     'title' => 'json',
-    //     'classification' => 'json',
-    // ];
 }

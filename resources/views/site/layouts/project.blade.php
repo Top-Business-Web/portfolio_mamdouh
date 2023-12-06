@@ -19,7 +19,7 @@
             @foreach ($projects as $project)
                 <div class="project-card me-4">
                     <div class="image-project">
-                        <img src="{{ asset('storage/'. $project->image) }}">
+                        <img src="{{ asset('storage/'. $project->images) }}">
                     </div>
                     <div class="text-light project-title">
                         <button type="button" class="btn-project fs-3" data-bs-toggle="modal"

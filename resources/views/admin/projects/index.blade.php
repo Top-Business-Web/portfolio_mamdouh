@@ -29,6 +29,7 @@
                                 <th class="min-w-50px">الصورة</th>
                                 <th class="min-w-50px">العنوان</th>
                                 <th class="min-w-125px">التصنيف</th>
+                                <th class="min-w-125px">الوصف</th>
                                 <th class="min-w-50px rounded-end">العمليات</th>
                             </tr>
                             </thead>
@@ -90,6 +91,7 @@
             {data: 'image', name: 'image'},
             {data: 'title', name: 'title'},
             {data: 'classification', name: 'classification'},
+            {data: 'description', name: 'description'},
             {data: 'action', name: 'action', orderable: false, searchable: false},
         ]
         // Show Data

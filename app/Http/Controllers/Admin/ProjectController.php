@@ -29,14 +29,16 @@ class ProjectController extends Controller
     // Private function to retrieve services data from the database for DataTables
     private function getProjectsData()
     {
-        $projects = Project::query()->select('id', 'image', 'title', 'classification')->get();
+        $projects = Project::query()->select('id', 'images', 'title', 'classification', 'description')->get();
         return DataTables::of($projects)
             ->addColumn('action', function ($projects) {
                 return $this->generateActionButtons($projects);
             })
-            ->editColumn('image', function ($projects) {
+            ->editColumn('images', function ($projects) {
+                $imageSrc = !empty($projects->images) ? asset('storage/' . json_decode($projects->images, true)) : '';
+            
                 return '
-                <img alt="image" onclick="window.open(this.src)" class="avatar avatar-md rounded-circle" src="' . asset('storage/' . $projects->image) . '">
+                    <img alt="image" onclick="window.open(this.src)" class="avatar avatar-md rounded-circle" src="' . $imageSrc["image1"] . '">
                 ';
             })
             ->editColumn('title', function ($projects) {
@@ -45,6 +47,10 @@ class ProjectController extends Controller
             })
             ->editColumn('classification', function ($projects) {
                 $json = json_decode($projects->classification, true);
+                return $json["ar"];
+            })
+            ->editColumn('description', function ($projects) {
+                $json = json_decode($projects->description, true);
                 return $json["ar"];
             })
             ->escapeColumns([])
@@ -83,13 +89,14 @@ class ProjectController extends Controller
 
     private function processProjectData(ProjectStoreRequest $request): array
     {
-        $data = $request->only(['image', 'title', 'classification']);
+        $data = $request->only(['image', 'title', 'classification', 'description']);
         $data['title'] = json_encode($request->title);
         $data['classification'] = json_encode($request->classification);
+        $data['description'] = json_encode($request->description);
 
-        if ($request->hasFile('image')) {
-            $imagePath = $request->file('image')->store('uploads/projects', 'public');
-            $data['image'] = $imagePath;
+        if ($request->hasFile('images')) {
+            $imagePath = $request->file('images')->store('uploads/projects', 'public');
+            $data['images'] = $imagePath;
         }
 
         return $data;
@@ -121,11 +128,11 @@ class ProjectController extends Controller
 
     private function handleImageUpload($request, &$inputs)
     {
-        if ($request->hasFile('image')) {
-            $imagePath = $request->file('image')->store('uploads/projects', 'public');
-            $inputs['image'] = $imagePath;
+        if ($request->hasFile('images')) {
+            $imagePath = $request->file('images')->store('uploads/projects', 'public');
+            $inputs['images'] = $imagePath;
         } else {
-            unset($inputs['image']);
+            unset($inputs['images']);
         }
     }
 
