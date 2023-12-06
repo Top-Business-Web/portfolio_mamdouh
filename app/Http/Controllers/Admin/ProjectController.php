@@ -29,16 +29,16 @@ class ProjectController extends Controller
     // Private function to retrieve services data from the database for DataTables
     private function getProjectsData()
     {
-        $projects = Project::query()->select('id', 'images', 'title', 'classification', 'description')->get();
+        $projects = Project::get();
         return DataTables::of($projects)
             ->addColumn('action', function ($projects) {
                 return $this->generateActionButtons($projects);
             })
             ->editColumn('images', function ($projects) {
-                $imageSrc = !empty($projects->images) ? asset('storage/' . json_decode($projects->images, true)) : '';
-            
+                $json = json_decode($projects->images, true);
+                $imageSrc = !empty($projects->images) ? asset('storage/' . $json[0]) : '';
                 return '
-                    <img alt="image" onclick="window.open(this.src)" class="avatar avatar-md rounded-circle" src="' . $imageSrc["image1"] . '">
+                    <img alt="image" onclick="window.open(this.src)" class="avatar avatar-md rounded-circle" src="' . $imageSrc . '">
                 ';
             })
             ->editColumn('title', function ($projects) {
@@ -89,14 +89,20 @@ class ProjectController extends Controller
 
     private function processProjectData(ProjectStoreRequest $request): array
     {
-        $data = $request->only(['image', 'title', 'classification', 'description']);
+        $data = $request->only(['title', 'classification', 'description']);
         $data['title'] = json_encode($request->title);
         $data['classification'] = json_encode($request->classification);
         $data['description'] = json_encode($request->description);
 
         if ($request->hasFile('images')) {
-            $imagePath = $request->file('images')->store('uploads/projects', 'public');
-            $data['images'] = $imagePath;
+            $imagePaths = [];
+
+            foreach ($request->file('images') as $image) {
+                $imagePath = $image->store('uploads/projects', 'public');
+                $imagePaths[] = $imagePath;
+            }
+
+            $data['images'] = $imagePaths;
         }
 
         return $data;

@@ -17,9 +17,9 @@ class ProjectSeeder extends Seeder
         $data = [
             [
                 "images" => json_encode([
-                    'image1' => '1.jpeg',
-                    'image2' => '2.jpeg',
-                    'image3' => '3.jpeg',
+                    '1.jpeg',
+                    '2.jpeg',
+                    '3.jpeg',
                 ]),
                 "title" => json_encode([
                     'ar' => 'مشروع 1',
@@ -36,9 +36,9 @@ class ProjectSeeder extends Seeder
             ],
             [
                 "images" => json_encode([
-                    'image1' => '1.jpeg',
-                    'image2' => '2.jpeg',
-                    'image3' => '3.jpeg',
+                   '1.jpeg',
+                   '2.jpeg',
+                   '3.jpeg',
                 ]),
                 "title" => json_encode([
                     'ar' => 'مشروع 1',
@@ -55,9 +55,9 @@ class ProjectSeeder extends Seeder
             ],
             [
                 "images" => json_encode([
-                    'image1' => '1.jpeg',
-                    'image2' => '2.jpeg',
-                    'image3' => '3.jpeg',
+                    '1.jpeg',
+                   '2.jpeg',
+                    '3.jpeg',
                 ]),
                 "title" => json_encode([
                     'ar' => 'مشروع 1',
@@ -74,9 +74,9 @@ class ProjectSeeder extends Seeder
             ],
             [
                 "images" => json_encode([
-                    'image1' => '1.jpeg',
-                    'image2' => '2.jpeg',
-                    'image3' => '3.jpeg',
+                   '1.jpeg',
+                    '2.jpeg',
+                    '3.jpeg',
                 ]),
                 "title" => json_encode([
                     'ar' => 'مشروع 1',
