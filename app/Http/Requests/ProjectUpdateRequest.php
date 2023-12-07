@@ -24,7 +24,7 @@ class ProjectUpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            "image" => "required|image",
+            "images" => "nullable",
             "title.ar" => "required",
             "title.en" => "required",
             "classification.ar" => "required",
@@ -35,7 +35,6 @@ class ProjectUpdateRequest extends FormRequest
     public function messages()
     {
         return [
-            "image.required" => "الصورة مطلوبة",
             "title.ar.required" => "العنوان مطلوب",
             "title.en.required" => "العنوان مطلوب",
             "classification.ar.required" => "التصنيف مطلوب",

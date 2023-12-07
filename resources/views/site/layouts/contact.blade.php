@@ -12,7 +12,7 @@
                     </div>
                     <div>
                         <h4>العنوان</h4>
-                        <p class="text-end">{{ $landingPageData->address }}</p>
+                        <p class="text-end">{!! $landingPageData->address !!}</p>
                     </div>
                 </div>
                 <div class="d-flex text-light mt-5">
