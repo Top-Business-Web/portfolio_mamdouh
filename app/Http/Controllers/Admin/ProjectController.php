@@ -78,7 +78,6 @@ class ProjectController extends Controller
     {
         try {
             $projectData = $this->processProjectData($request);
-            // dd($projectData);
             $project = Project::create($projectData);
 
             return response()->json(['status' => $project ? 200 : 405]);
@@ -102,7 +101,7 @@ class ProjectController extends Controller
                 $imagePaths[] = $imagePath;
             }
 
-            $data['images'] = $imagePaths;
+            $data['images'] = json_encode($imagePaths);
         }
 
         return $data;
@@ -135,8 +134,15 @@ class ProjectController extends Controller
     private function handleImageUpload($request, &$inputs)
     {
         if ($request->hasFile('images')) {
-            $imagePath = $request->file('images')->store('uploads/projects', 'public');
-            $inputs['images'] = $imagePath;
+            $imagePaths = [];
+
+            foreach ($request->file('images') as $image) {
+                $imagePath = $image->store('uploads/projects', 'public');
+                $imagePaths[] = $imagePath;
+            }
+
+            // Convert the array of image paths to a JSON string
+            $inputs['images'] = json_encode($imagePaths);
         } else {
             unset($inputs['images']);
         }
