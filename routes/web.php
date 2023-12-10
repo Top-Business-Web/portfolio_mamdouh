@@ -17,7 +17,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 */
 
 
-Route::get('site', [HomeController::class, 'showPortfolio'])->name('portfolio.show');
+Route::get('/', [HomeController::class, 'showPortfolio'])->name('portfolio.show');
 Route::get('project/{id}/details', [HomeController::class, 'showProjectDetail'])->name('projectDetail.show');
 
 ###### Contnact ######
