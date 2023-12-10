@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Site;
 
 use App\Models\Contact;
+use App\Models\Project;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
@@ -15,7 +16,7 @@ class HomeController extends Controller
         $landingPageData = $this->getLandingPageData();
         $services = $this->getServiceData();
         $projects = $this->getProjectData();
-        return view('site.layout', compact('landingPageData', 'services', 'projects'));
+        return view('site.layouts.index', compact('landingPageData', 'services', 'projects'));
     }
 
     private function getLandingPageData()
@@ -43,7 +44,7 @@ class HomeController extends Controller
     {
         // Create a new Contact model instance
         $contact = new Contact();
-        
+
         // Set the model properties with the form data
         $contact->name = $request->input('name');
         $contact->email = $request->input('email');
@@ -54,5 +55,19 @@ class HomeController extends Controller
         $contact->save();
 
         return redirect('/site');
+    }
+
+    private function findProjectById($projectId)
+    {
+        return Project::findOrFail($projectId);
+    }
+
+    public function showProjectDetail(Request $request)
+    {
+        $projectId = $request->id;
+        $project = $this->findProjectById($projectId);
+        $landingPageData = $this->getLandingPageData();
+
+        return view('site.project-details', compact('project', 'landingPageData'));
     }
 }
