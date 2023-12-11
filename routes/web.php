@@ -16,9 +16,16 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 |
 */
 
+Route::group(
+    [
+        'prefix' => LaravelLocalization::setLocale(),
+        'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
+    ],
+    function () {
+        Route::get('/', [HomeController::class, 'showPortfolio'])->name('portfolio.show');
+        Route::get('project/{id}/details', [HomeController::class, 'showProjectDetail'])->name('projectDetail.show');
 
-Route::get('/', [HomeController::class, 'showPortfolio'])->name('portfolio.show');
-Route::get('project/{id}/details', [HomeController::class, 'showProjectDetail'])->name('projectDetail.show');
-
-###### Contnact ######
-Route::post('contact/store', [HomeController::class, 'storeContact'])->name('contact.store');
+        ###### Contnact ######
+        Route::post('contact/store', [HomeController::class, 'storeContact'])->name('contact.store');
+    }
+);

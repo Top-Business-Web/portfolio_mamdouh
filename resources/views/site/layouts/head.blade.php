@@ -13,6 +13,10 @@
     <link rel="stylesheet" href="{{ asset('assets/site/css/slick.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/site/css/slick-theme.css') }}">
 
-    <link rel="stylesheet" href="{{ asset('assets/site/css/style.css') }}">
+    @if (app()->getLocale() == 'ar')
+        <link rel="stylesheet" href="{{ asset('assets/site/css/style.css') }}">
+    @else
+        <link rel="stylesheet" href="{{ asset('assets/site/css/ltr.css') }}">
+    @endif
 
 </head>

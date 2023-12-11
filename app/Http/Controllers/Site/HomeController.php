@@ -54,7 +54,8 @@ class HomeController extends Controller
         // Save the model to the database
         $contact->save();
 
-        return redirect('/site');
+        toastr()->success('تم ارسال طلبك سنرد عليك في اقرب وقت');
+        return redirect('/');
     }
 
     private function findProjectById($projectId)
