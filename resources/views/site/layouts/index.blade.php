@@ -9,13 +9,13 @@
           <div class="col-lg-6 col-12 d-flex align-items-center ps-5 pe-5">
               <div class="content-land pt-5">
                   <div class="text-light text">
-                      <span class="text1">مرحبا, أنا</span>
+                      <span class="text1">{{ trans('site.Hello,_its_me') }}</span>
                       <h1 class="text2">{{ json_decode($landingPageData->name_owner)->{app()->getLocale()} }}</h1>
                       <p class="text3">{!! json_decode($landingPageData->description_owner)->{app()->getLocale()} !!}</p>
                   </div>
                   <div class="video-content d-flex flex-wrap">
                       <a href="#about" class="btn-start mb-3">
-                          <span>ابدأالان</span>
+                          <span>{{ trans('site.start_now') }}</span>
                       </a>
                       <div class="d-flex">
                           <div>
@@ -24,7 +24,7 @@
                                   <i class="fa-solid fa-play"></i>
                               </button>
                           </div>
-                          <h5 class="text-light me-3 d-flex align-items-center">ابدأ المشاهدة الان</h5>
+                          <h5 class="text-light me-3 d-flex align-items-center">{{ trans('site.start_watching_now') }}</h5>
                       </div>
                   </div>
                   <div class="social-link mt-5">
@@ -91,19 +91,19 @@
           <div class="row text-light">
               <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                   <span class="num">{{ $landingPageData->project_successfully }}+</span>
-                  <h3>المشاريع الجديدة</h3>
+                  <h3>{{ trans('site.new_projects') }}</h3>
               </div>
               <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                   <span class="num">{{ $landingPageData->best_customers }}+</span>
-                  <h3> أفضل العملاء</h3>
+                  <h3>{{ trans('site.best_customers') }}</h3>
               </div>
               <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                   <span class="num">{{ $landingPageData->years_experience }}+</span>
-                  <h3>سنوات الخبرة</h3>
+                  <h3>{{ trans('site.years_of_experience') }}</h3>
               </div>
               <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                   <span class="num">{{ $landingPageData->customers }}+</span>
-                  <h3> العملاء</h3>
+                  <h3>{{ trans('site.customers') }}</h3>
               </div>
           </div>
       </div>
@@ -146,11 +146,11 @@
           </div>
           <div class="col-lg-6 col-12 mt-5">
               <div class="text-about text-light">
-                  <h1 class="fw-bold mb-4">لماذا تقوم باختيارى؟</h1>
+                  <h1 class="fw-bold mb-4">{{ trans('site.why_choose_me?') }}</h1>
                   <p class="lh-lg">{!! json_decode($landingPageData->description_about)->{app()->getLocale()} !!}</p>
               </div>
               <button type="button" class="btn-start" data-bs-toggle="modal" data-bs-target="#exampleModal1">
-                  <span>ليه الاستثمار فى دبى</span>
+                  <span>{{ trans('site.why_invest_in_dubai?') }}</span>
               </button>
           </div>
           <div class="col-12 mb-4">
@@ -161,7 +161,7 @@
                               <div class="content-service d-flex">
                                   <div class="icon-service ms-3 d-flex align-items-center">
                                       <div class="test">
-                                          <img src="{{ asset('storage/' ,$service->icon) }}" >
+                                          <img src="{{ asset('storage/' .$service->icon) }}" >
                                       </div>
                                   </div>
                                   <div class="text-service text-light">
@@ -188,28 +188,7 @@
           <button type="button" class="btn-close m-2" data-bs-dismiss="modal" aria-label="Close"></button>
           <div class="modal-body">
               <div>
-                  <h3 class="fw-bold mb-2 main-color">لماذا تقوم باختيارى؟</h3>
-                  <p class="lh-lg">نقوم بإدارة كافة الشؤون الإدارية وما يتعلق بتوقيع عقود إيجار جديدة أو تجديدها من
-                      قبل المستأجرين الأفراد أو الشركات.نقوم بالتفاوض على سعر وعقد الإيجار مع المستأجرين وفقاً للشروط
-                      المتفق عليها مسبقاً مع المالك، كما يقوم فريق مختص بتحصيل الإيجار ويعمل مع الفريق القانوني للشركة
-                      لمتابعة تحصيل المبالغ من المتخلفين عن السداد؛ ويقوم الفريق القانوني عند الحاجة بتمثيل المالك في
-                      حل أي مشكلة أو نزاع متعلق بالجهات الحكومية مثل لجنة الإيجارات وبلدية دبي.</p>
-              </div>
-              <div>
-                  <h3 class="fw-bold mb-2 main-color">لماذا تقوم باختيارى؟</h3>
-                  <p class="lh-lg">نقوم بإدارة كافة الشؤون الإدارية وما يتعلق بتوقيع عقود إيجار جديدة أو تجديدها من
-                      قبل المستأجرين الأفراد أو الشركات.نقوم بالتفاوض على سعر وعقد الإيجار مع المستأجرين وفقاً للشروط
-                      المتفق عليها مسبقاً مع المالك، كما يقوم فريق مختص بتحصيل الإيجار ويعمل مع الفريق القانوني للشركة
-                      لمتابعة تحصيل المبالغ من المتخلفين عن السداد؛ ويقوم الفريق القانوني عند الحاجة بتمثيل المالك في
-                      حل أي مشكلة أو نزاع متعلق بالجهات الحكومية مثل لجنة الإيجارات وبلدية دبي.</p>
-              </div>
-              <div>
-                  <h3 class="fw-bold mb-2 main-color">لماذا تقوم باختيارى؟</h3>
-                  <p class="lh-lg">نقوم بإدارة كافة الشؤون الإدارية وما يتعلق بتوقيع عقود إيجار جديدة أو تجديدها من
-                      قبل المستأجرين الأفراد أو الشركات.نقوم بالتفاوض على سعر وعقد الإيجار مع المستأجرين وفقاً للشروط
-                      المتفق عليها مسبقاً مع المالك، كما يقوم فريق مختص بتحصيل الإيجار ويعمل مع الفريق القانوني للشركة
-                      لمتابعة تحصيل المبالغ من المتخلفين عن السداد؛ ويقوم الفريق القانوني عند الحاجة بتمثيل المالك في
-                      حل أي مشكلة أو نزاع متعلق بالجهات الحكومية مثل لجنة الإيجارات وبلدية دبي.</p>
+                  <p class="lh-lg">{!! json_decode($landingPageData->description_about)->{app()->getLocale()} !!}</p>
               </div>
           </div>
       </div>
@@ -222,14 +201,14 @@
           <div class="row">
               <div class="col-md-6 col-12">
                   <div class="text-light mb-5">
-                      <h1 class="fw-bold">أعمالنا</h1>
-                      <p>يمكنك متابعة أخر اعمالنا</p>
+                      <h1 class="fw-bold">{{ trans('site.our_business') }}</h1>
+                      <p>{{ trans('site.you_can_follow_our_latest_work') }}</p>
                   </div>
               </div>
               <div class="col-md-6 col-12 d-flex justify-content-end">
                   <div>
                       <a href="#contact" class="btn-start">
-                          <span>تواصل معنا</span>
+                          <span>{{ trans('site.connect_with_us') }}</span>
                       </a>
                   </div>
               </div>
@@ -255,43 +234,13 @@
           </div>
       </div>
   </section>
-  <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-              <button type="button" class="btn-close m-2" data-bs-dismiss="modal" aria-label="Close"></button>
-              <div class="modal-body">
-                  <div class="row">
-                      <div class="col-lg-6 col-12">
-                          <div class="main-slider projectModalImage" style="direction: ltr;">
-  
-                          </div>
-                          <div class="small-slider projectModalSmallImage" style="direction: ltr;">
-                              {{-- @foreach (json_decode($project->images) as $item)
-                              <img class="img-fluid" src="storage/{{ $item }}" alt="no image" />
-                              @endforeach --}}
-  
-                              <img class="img-fluid" src="{{ asset('assets/site/photo/bh3.jpg') }}" alt="no image" />
-                              <img class="img-fluid" src="{{ asset('assets/site/photo/bh3.jpg') }}" alt="no image" />
-                              <img class="img-fluid" src="{{ asset('assets/site/photo/bh3.jpg') }}" alt="no image" />
-                          </div>
-                      </div>
-                      <div class="col-lg-6 col-12">
-                          <div>
-                              <h3 id="projectModalTitle" class="fw-bold mb-2 main-color title"></h3>
-                              <p id="projectModalDescription" class="lh-lg"></p>
-                          </div>
-                      </div>
-                  </div>
-  
-              </div>
-          </div>
-      </div>
-  </div>
+
 
 @endsection
 
 @section('js')
-  <script>
+ 
+ <script>
       document.addEventListener('DOMContentLoaded', function() {
           // Get all buttons with the class 'btn-project'
           const projectButtons = document.querySelectorAll('.btn-project');

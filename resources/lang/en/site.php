@@ -14,43 +14,30 @@ return [
     */
 
     // homepage
-    'We will become long term partners' => 'We will become long term partners',
-    'Looking for your dream home?' => 'Looking for your dream home?',
-    'Our company will help you achieve your dream of having a new home' => 'Our company will help you achieve your dream of having a new home',
-    'start now' => 'start now',
-    'Aknan Real Estate Group' => 'Aknan Real Estate Group',
-    'We are committed to helping our customers get better
-                         Solutions available in real estate investment through specialists in customer care.... ...' => 'We are committed to helping our customers get better
-                         Solutions available in real estate investment through specialists in customer care.... ...',
-    'More'=>'More',
-    'Register with us!' => 'Register with us!',
-    'We take pride in everything we do, developing selling platforms
-                             Innovative real estate
-                             and CRM systems for our clients, so these new tools and options help find the best properties
-                             and submit it
-                             to our customers.' => 'We take pride in everything we do, developing selling platforms
-                             Innovative real estate
-                             and CRM systems for our clients, so these new tools and options help find the best properties
-                             and submit it
-                             to our customers.',
-    'Register now' => 'Register now',
-    'services' => 'Services',
-    'The best local agents'=>'The best local agents',
-    'excellent reputation'=>'excellent reputation',
-    'projects' => 'Our Projects',
-    'about us' => 'About Us',
-    'Register interest'=>'Register interest',
-    'contact' => 'Contact',
-    'Sales center' => 'Sales center',
-    'home' => 'Home',
-
-
-    // footer
-    'copyright' => 'All rights reserved ©',
-    'villas' => 'Villas',
-    'town house' => 'Town Houses',
-    'on the map' => 'On The Map',
-    'partners' => 'Our Partners',
-    'careers' => 'Careers',
-
+    "portfolio" => "Portfolio",
+    "home" => "Home",
+    "who_are_we" => "Who are we",
+    "our_services" => "Our services",
+    "our_projects" => "Our projects",
+    "connect_with_us" => "Connect with us",
+    "Hello,_its_me" => "Hello, it's me",
+    "start_now" => "Start now",
+    "start_watching_now" => "Start watching now",
+    "new_projects"=> "New projects",
+    "best_customers"=> "Best customers",
+    "years_of_experience"=> "Years of experience",
+    "customers"=> "Customers",
+    "why_choose_me?"=> "Why choose me?",
+    "why_invest_in_dubai?"=> "Why invest in Dubai?",
+    "our_business"=> "Our business",
+    "you_can_follow_our_latest_work"=> "You can follow our latest work",
+    "contact_us"=> "Contact us",
+    "we_can_answer_all_your_concerns_and_provide_all_the_entertainment"=> "We can answer all your concerns and provide all the entertainment",
+    "address"=> "Address",
+    "email"=> "Email",
+    "phone"=> "Phone",
+    "name"=> "Name",
+    "subject"=> "Subject",
+    "message"=> "Message",
+    "all_rights_are_save"=> "All rights are save"
 ];
