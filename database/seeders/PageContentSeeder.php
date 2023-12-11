@@ -37,6 +37,10 @@ class PageContentSeeder extends Seeder
                     'ar' => 'نقوم بإدارة كافة الشؤون الإدارية وما يتعلق بتوقيع عقود إيجار جديدة أو تجديدها من قبل المستأجرين الأفراد أو الشركات.نقوم بالتفاوض على سعر وعقد الإيجار مع المستأجرين وفقاً للشروط المتفق عليها مسبقاً مع المالك، كما يقوم فريق مختص بتحصيل الإيجار ويعمل مع الفريق القانوني للشركة لمتابعة تحصيل المبالغ من المتخلفين عن السداد؛ ويقوم الفريق القانوني عند الحاجة بتمثيل المالك في حل أي مشكلة أو نزاع متعلق بالجهات الحكومية مثل لجنة الإيجارات وبلدية دبي.',
                     'en' => 'We manage all administrative affairs related to signing new or renewing lease contracts by individual tenants or companies. We negotiate the price and lease contract with the tenants according to the terms previously agreed upon with the landlord. A specialized team also collects the rent and works with the company’s legal team to follow up on collecting the amounts. of defaulters; When needed, the legal team represents the landlord in resolving any problem or dispute related to government agencies such as the Rent Committee and Dubai Municipality.',
                 ]),
+                "facebook" => "https://www.facebook.com",
+                "twitter" => "https://www.twitter.com",
+                "linkedin" => "https://www.linkedin.com",
+                "instagram" => "https://www.instagram.com",
             ]
         ];
         DB::table('page_contents')->insert($data);

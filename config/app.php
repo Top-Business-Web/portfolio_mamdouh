@@ -162,7 +162,6 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
-
         /*
          * Package Service Providers.....
          */
@@ -178,7 +177,6 @@ return [
         App\Providers\RepositoryServiceProvider::class,
 
         ///=============== custom ===========
-       Yoeunes\Toastr\ToastrServiceProvider::class,
         A6digital\Image\DefaultProfileImageServiceProvider::class,
         Yajra\Datatables\DatatablesServiceProvider::class,
         Tymon\JWTAuth\Providers\LaravelServiceProvider::class,

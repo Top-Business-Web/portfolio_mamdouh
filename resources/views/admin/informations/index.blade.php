@@ -143,7 +143,27 @@
                                         </div>
                                         <div class="col-6">
                                             <label for="name" class="form-control-label">الهاتف</label>
-                                            <input type="text" value="{{ $informations->phone }}" class="form-control" name="phone">
+                                            <input type="text" value="{{ $informations->phone }}" class="form-control text-left" name="phone">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6" style="text-align: left">
+                                            <label for="name" class="form-control-label"> : Facebook</label>
+                                            <input type="text" value="{{ $informations->facebook }}" class="form-control text-left" name="facebook">
+                                        </div>
+                                        <div class="col-6" style="text-align: left">
+                                            <label for="name" class="form-control-label"> : Twitter</label>
+                                            <input type="text" value="{{ $informations->twitter }}" class="form-control text-left" name="tcwitter">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6" style="text-align: left">
+                                            <label for="name" class="form-control-label"> : Linkedin</label>
+                                            <input type="text" value="{{ $informations->linkedin }}" class="form-control text-left" name="linkedin">
+                                        </div>
+                                        <div class="col-6" style="text-align: left">
+                                            <label for="name" class="form-control-label"> : Instagram</label>
+                                            <input type="text" value="{{ $informations->instagram }}" class="form-control text-left" name="instagram">
                                         </div>
                                     </div>
                                     <div class="row">

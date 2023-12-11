@@ -38,7 +38,11 @@ class PageContentController extends Controller
             'best_customers',
             'project_successfully',
             'image_description',
-            'description_about'
+            'description_about',
+            'facebook',
+            'twitter',
+            'linkedin',
+            'instagram',
         )->firstOrFail();
     }
 
