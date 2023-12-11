@@ -39,6 +39,10 @@ class UpdateInformationRequest extends FormRequest
             "image_description" => "sometimes|image",
             "description_about.ar" => "required",
             "description_about.en" => "required",
+            "facebook" => 'required',
+            "twitter" => 'required',
+            "linkedin" => 'required',
+            "instagram" => 'required',
         ];
     }
 
@@ -69,6 +73,10 @@ class UpdateInformationRequest extends FormRequest
             "image_description.image" => "يجب ان تكون صورة",
             "description_about.ar.required" => "وصف بالعربي ماذا عنا مطلوب",
             "description_about.en.required" => "وصف بالإنجليزي ماذا عنا مطلوب",
+            "facebook.required" => "الفيسبوك مطلوب",
+            "twitter.required" => "تويتر مطلوب",
+            "linkedin.required" => "لينكدان مطلوب",
+            "instagram.required" => "انستجرام مطلوب",
         ];
     }
 }

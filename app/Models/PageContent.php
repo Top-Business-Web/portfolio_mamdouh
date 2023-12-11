@@ -24,6 +24,10 @@ class PageContent extends Model
         'project_successfully',
         'image_description',
         'description_about',
+        'facebook',
+        'twitter',
+        'linkedin',
+        'instagram',
     ];
 
     protected $casts = [
