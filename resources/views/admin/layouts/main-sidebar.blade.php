@@ -2,8 +2,9 @@
 <aside class="app-sidebar">
     <div class="side-header">
         <a class="header-brand1" href="{{route('adminHome')}}">
-            <img src=""
-                 class="header-brand-img light-logo1" alt="logo">
+            {{-- <img src=""
+                 class="header-brand-img light-logo1" alt="logo"> --}}
+                 <h4 style="font-style: bold;">الرئيسية</h4>
         </a>
         <!-- LOGO -->
     </div>
@@ -21,7 +22,7 @@
                 <span class="side-menu__label">المشرفين</span>
             </a>
         </li>
-        
+
         <li class="slide">
             <a class="side-menu__item" href="{{ route('showInformation') }}">
                 <i class="fa fa-question side-menu__icon"></i>

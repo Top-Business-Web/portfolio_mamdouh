@@ -153,7 +153,7 @@
                                         </div>
                                         <div class="col-6" style="text-align: left">
                                             <label for="name" class="form-control-label"> : Twitter</label>
-                                            <input type="text" value="{{ $informations->twitter }}" class="form-control text-left" name="tcwitter">
+                                            <input type="text" value="{{ $informations->twitter }}" class="form-control text-left" name="twitter">
                                         </div>
                                     </div>
                                     <div class="row">

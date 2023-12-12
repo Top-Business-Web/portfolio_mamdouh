@@ -1,5 +1,5 @@
 <style>
-    .Global-Loader img{
+    /* .Global-Loader img{
         /* Start the shake animation and make the animation last for 0.5 seconds */
         animation: shake 2s;
 
@@ -19,7 +19,7 @@
         80% { transform: translate(-1px, -1px) rotate(1deg); }
         90% { transform: translate(1px, 2px) rotate(0deg); }
         100% { transform: translate(1px, -2px) rotate(-1deg); }
-    }
+    } */
 </style>
 <div class="Global-Loader" id="global-loader">
     <img style="width: 400px;" src="{{ asset('assets/admin/assets/images/OFAF.gif')}}" class="loader-img" alt="Loader">
