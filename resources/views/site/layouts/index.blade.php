@@ -210,7 +210,7 @@
               <div class="col-md-6 col-12 d-flex justify-content-end">
                   <div>
                       <a href="#contact" class="btn-start">
-                          <span>{{ trans('site.connect_with_us') }}</span>
+                          <span>{{ trans('site.contact') }}</span>
                       </a>
                   </div>
               </div>
