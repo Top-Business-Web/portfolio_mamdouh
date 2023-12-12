@@ -20,7 +20,7 @@
                         <i class="fa-regular fa-envelope-open"></i>
                     </div>
                     <div>
-                        <h4 class="text-email">{{ trans('site.email') }}</h4>
+                        <h4 class="text-email text-end">{{ trans('site.email') }}</h4>
                         <a href="mailto: info@yourmail.com" class="text-decoration-none text-white">
                             {{ $landingPageData->email }}
                         </a>
@@ -31,7 +31,7 @@
                         <i class="fa-solid fa-phone-volume"></i>
                     </div>
                     <div class="mb-3">
-                        <h4 class="text-end text-email">{{ trans('site.phone') }}</h4>
+                        <h4 class="text-email">{{ trans('site.phone') }}</h4>
                         <a href="tel: 457 789 789 65" class="text-decoration-none text-white">
                             {{ $landingPageData->phone }}
                         </a>
