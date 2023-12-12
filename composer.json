@@ -19,7 +19,7 @@
         "simplesoftwareio/simple-qrcode": "^4.2",
         "tymon/jwt-auth": "^1.0",
         "yajra/laravel-datatables": "^1.5"
-        },
+    },
     "require-dev": {
         "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",
