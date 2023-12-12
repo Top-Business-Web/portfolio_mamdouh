@@ -37,6 +37,7 @@ class AuthRepository implements AuthInterface
     public function logout()
     {
         Auth::guard('admin')->logout();
+        toastr()->info('تم تسجيل الخروج');
         return redirect('admin/login');
     }
 }
