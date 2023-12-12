@@ -490,4 +490,11 @@ p{
     font-size: 18px;
     margin: 5px;
 }
+
+.icon-contact{
+    margin-right: 20px;
+}
+.text-email{
+    text-align: left !important;
+}
 /* finish contact */

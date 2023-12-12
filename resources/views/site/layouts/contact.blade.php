@@ -7,7 +7,7 @@
                     <p>{{ trans('site.we_can_answer_all_your_concerns_and_provide_all_the_entertainment') }}</p>
                 </div>
                 <div class="d-flex text-light mt-5">
-                    <div class="fs-3 ms-3">
+                    <div class="fs-3 ms-3 icon-contact">
                         <i class="fa-solid fa-house-chimney"></i>
                     </div>
                     <div>
@@ -16,22 +16,22 @@
                     </div>
                 </div>
                 <div class="d-flex text-light mt-5">
-                    <div class="fs-3 ms-3">
+                    <div class="fs-3 ms-3 icon-contact">
                         <i class="fa-regular fa-envelope-open"></i>
                     </div>
                     <div>
-                        <h4>{{ trans('site.email') }}</h4>
+                        <h4 class="text-email">{{ trans('site.email') }}</h4>
                         <a href="mailto: info@yourmail.com" class="text-decoration-none text-white">
                             {{ $landingPageData->email }}
                         </a>
                     </div>
                 </div>
                 <div class="d-flex text-light mt-5">
-                    <div class="fs-3 ms-3">
+                    <div class="fs-3 ms-3 icon-contact">
                         <i class="fa-solid fa-phone-volume"></i>
                     </div>
                     <div class="mb-3">
-                        <h4 class="text-end">{{ trans('site.phone') }}</h4>
+                        <h4 class="text-end text-email">{{ trans('site.phone') }}</h4>
                         <a href="tel: 457 789 789 65" class="text-decoration-none text-white">
                             {{ $landingPageData->phone }}
                         </a>

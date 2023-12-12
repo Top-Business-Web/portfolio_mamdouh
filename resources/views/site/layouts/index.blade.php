@@ -222,7 +222,7 @@
                           <img src="{{ asset('storage/' . json_decode($project->images)[0]) }}">
                       </div>
                       <div class="text-light project-title">
-                          <a href="{{ route('projectDetail.show', $project->id) }}"><button type="button" class="btn-project fs-3" data-bs-toggle="modal"
+                          <a class="text-import" href="{{ route('projectDetail.show', $project->id) }}"><button type="button" class="btn-project fs-3" data-bs-toggle="modal"
                               data-bs-target="#exampleModal2" data-project-id="{{ $project->id }}"
                               data-project-title="{{ json_decode($project->title)->{app()->getLocale()} }}"
                               data-project-description="{{ json_decode($project->description)->{app()->getLocale()} }}"

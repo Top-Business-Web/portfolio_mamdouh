@@ -485,3 +485,9 @@ p{
     margin: 5px;
 }
 /* finish contact */
+.text-import{
+    text-align: right !important;
+}
+.text-email{
+    text-align: right !important;
+}

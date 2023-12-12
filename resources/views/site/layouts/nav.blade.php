@@ -16,7 +16,7 @@
                     <a class="nav-link p-lg-3 active" aria-current="page" href="{{ url('/') }}">{{ trans('site.home') }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link p-lg-3" href="#about">{{ trans('site.who_are_we') }}</a>
+                    <a class="nav-link p-lg-3" href="#about">{{ trans('site.about_us') }}</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link p-lg-3" href="#services">{{ trans('site.our_services') }}</a>
@@ -25,7 +25,7 @@
                     <a class="nav-link p-lg-3" href="#Portfolio">{{ trans('site.our_projects') }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link p-lg-3" href="#contact">{{ trans('site.connect_with_us') }}</a>
+                    <a class="nav-link p-lg-3" href="#contact">{{ trans('site.contact') }}</a>
                 </li>
             </ul>
             <ul class="navbar-nav navbar-right mb-2 mb-lg-0 ms-lg-auto">

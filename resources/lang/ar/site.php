@@ -17,10 +17,10 @@ return [
 
     "portfolio" => "ملف التعريفي",
     "home" => "الرئيسية",
-    "who_are_we" => "من نحن",
+    "about_us" => "من نحن",
     "our_services" => "خدماتنا",
     "our_projects" => "مشاريعنا",
-    "connect_with_us" => "تواصل معنا",
+    "contact" => "تواصل معنا",
     "Hello,_its_me" => "مرحبا, أنا",
     "start_now" => "ابدأ الآن",
     "start_watching_now" => "ابدأ المشاهدة الان",

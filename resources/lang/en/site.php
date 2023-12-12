@@ -16,10 +16,10 @@ return [
     // homepage
     "portfolio" => "Portfolio",
     "home" => "Home",
-    "who_are_we" => "Who are we",
+    "about_us" => "About Us",
     "our_services" => "Our services",
     "our_projects" => "Our projects",
-    "connect_with_us" => "Connect with us",
+    "contact" => "Contact",
     "Hello,_its_me" => "Hello, it's me",
     "start_now" => "Start now",
     "start_watching_now" => "Start watching now",
