@@ -52,6 +52,9 @@
                           <li>
                               <a href="{{ $landingPageData->instagram }}" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                           </li>
+                          <li>
+                              <a href="{{ $landingPageData->tiktok }}" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                          </li>
                       </ul>
                   </div>
               </div>

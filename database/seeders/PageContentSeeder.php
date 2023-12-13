@@ -41,6 +41,7 @@ class PageContentSeeder extends Seeder
                 "twitter" => "https://www.twitter.com",
                 "linkedin" => "https://www.linkedin.com",
                 "instagram" => "https://www.instagram.com",
+                "tiktok" => "https://www.tiktok.com",
             ]
         ];
         DB::table('page_contents')->insert($data);

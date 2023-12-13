@@ -31,6 +31,7 @@ class CreatePageContentsTable extends Migration
             $table->string('twitter');
             $table->string('linkedin');
             $table->string('instagram');
+            $table->string('tiktok');
             $table->timestamps();
         });
     }
