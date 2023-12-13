@@ -71,16 +71,19 @@
                 <div class="social-link">
                     <ul class="list-unstyled d-flex">
                         <li>
-                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="{{ $landingPageData->facebook }}" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="{{ $landingPageData->twitter }}" target="_blank"><i class="fa-brands fa-twitter"></i></a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="{{ $landingPageData->linkedin }}" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="{{ $landingPageData->instagram }}" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a href="{{ $landingPageData->tiktok }}" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
                         </li>
                     </ul>
                 </div>

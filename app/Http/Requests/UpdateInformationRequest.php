@@ -43,6 +43,7 @@ class UpdateInformationRequest extends FormRequest
             "twitter" => 'required',
             "linkedin" => 'required',
             "instagram" => 'required',
+            "tiktok" => 'required',
         ];
     }
 
@@ -77,6 +78,7 @@ class UpdateInformationRequest extends FormRequest
             "twitter.required" => "تويتر مطلوب",
             "linkedin.required" => "لينكدان مطلوب",
             "instagram.required" => "انستجرام مطلوب",
+            "tiktok.required" => "تيكتوك مطلوب",
         ];
     }
 }

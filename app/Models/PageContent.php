@@ -28,6 +28,7 @@ class PageContent extends Model
         'twitter',
         'linkedin',
         'instagram',
+        'tiktok',
     ];
 
     protected $casts = [

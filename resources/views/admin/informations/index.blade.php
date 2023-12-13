@@ -165,6 +165,10 @@
                                             <label for="name" class="form-control-label"> : Instagram</label>
                                             <input type="text" value="{{ $informations->instagram }}" class="form-control text-left" name="instagram">
                                         </div>
+                                        <div class="col-6" style="text-align: left">
+                                            <label for="name" class="form-control-label"> : Tiktok</label>
+                                            <input type="text" value="{{ $informations->tiktok }}" class="form-control text-left" name="tiktok">
+                                        </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-12">
