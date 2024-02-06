@@ -13,7 +13,8 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link p-lg-3 active" aria-current="page" href="{{ url('/') }}">{{ trans('site.home') }}</a>
+                    <a class="nav-link p-lg-3 active" aria-current="page"
+                        href="{{ url('/') }}">{{ trans('site.home') }}</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link p-lg-3" href="#about">{{ trans('site.about_us') }}</a>
@@ -42,15 +43,21 @@
                         </a>
                     @endif
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        @php
+                            $currentLocale = LaravelLocalization::getCurrentLocale();
+                        @endphp
                         @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                            <li>
-                                <a class="dropdown-item btn-language" rel="alternate" hreflang="{{ $localeCode }}"
-                                    href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-                                    <img src="{{ asset('assets/site/photo/' . ($localeCode == 'ar' ? 'arabic.png' : 'english.png')) }}"
-                                        alt="{{ $properties['native'] }}">
-                                    {{ $properties['native'] }}
-                                </a>
-                            </li>
+                            @if ($localeCode != $currentLocale)
+                                <li>
+                                    <a class="dropdown-item btn-language" rel="alternate"
+                                        hreflang="{{ $localeCode }}"
+                                        href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                        <img src="{{ asset('assets/site/photo/' . ($localeCode == 'ar' ? 'arabic.png' : 'english.png')) }}"
+                                            alt="{{ $properties['native'] }}">
+                                        {{ $properties['native'] }}
+                                    </a>
+                                </li>
+                            @endif
                         @endforeach
                     </ul>
                 </li>

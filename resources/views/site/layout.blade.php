@@ -19,8 +19,12 @@
         </div>
     </a>
 
+    @php
+        $whatsapp = $content->phone;
+    @endphp
+
     <!-- whatsapp -->
-    <a href="https://wa.me/920033007" target="_blank" class="whatsapp">
+    <a href="https://wa.me/{{ $whatsapp }}" target="_blank" class="whatsapp">
         <img src="{{ asset('assets/site/photo/wa-whatsapp-icon.svg') }}" alt="no-image">
     </a>
 

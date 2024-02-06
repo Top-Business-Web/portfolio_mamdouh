@@ -19,7 +19,7 @@
                     <div class="small-slider" style="direction: ltr;">
                         @if (!empty($project->images))
                             @foreach (json_decode($project->images, true) as $image)
-                                <img class="img-fluid" src="{{ asset('storage/' . $image) }}" alt="No Image" />
+                                <img class="img-fluid" src="{{ asset('storage/' . $image) }}" alt="No Image" style="height: 100px" />
                             @endforeach
                         @else
                             <p>No images available</p>

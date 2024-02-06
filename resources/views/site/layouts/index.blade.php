@@ -163,7 +163,7 @@
                   <div class="row">
                       @foreach ($services as $service)
                           <div class="col-lg-4 col-md-6 col-12">
-                              <div class="content-service d-flex">
+                              <div class="content-service d-flex" style="height: 170px">
                                   <div class="icon-service ms-3 d-flex align-items-center">
                                       <div class="test">
                                           <img src="{{ asset('storage/' .$service->icon) }}" >
