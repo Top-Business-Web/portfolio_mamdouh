@@ -34,7 +34,7 @@
                     @if (app()->getLocale() == 'ar')
                         <a class="nav-link btn-language" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="{{ asset('assets/site/photo/arabic.png') }}" alt="Arabic"> العربية
+                            <img src="{{ asset('assets/site/photo/arabic.jpg') }}" alt="Arabic"> العربية
                         </a>
                     @else
                         <a class="nav-link btn-language" href="#" id="navbarDropdown" role="button"
@@ -52,7 +52,7 @@
                                     <a class="dropdown-item btn-language" rel="alternate"
                                         hreflang="{{ $localeCode }}"
                                         href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-                                        <img src="{{ asset('assets/site/photo/' . ($localeCode == 'ar' ? 'arabic.png' : 'english.png')) }}"
+                                        <img src="{{ asset('assets/site/photo/' . ($localeCode == 'ar' ? 'arabic.jpg' : 'english.png')) }}"
                                             alt="{{ $properties['native'] }}">
                                         {{ $properties['native'] }}
                                     </a>
