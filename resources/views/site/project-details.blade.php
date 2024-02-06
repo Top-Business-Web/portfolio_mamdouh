@@ -30,7 +30,7 @@
                     <div>
                         <h3 class="fw-bold mb-4 mt-3 text-white">{{ json_decode($project->title)->{app()->getLocale()} }}
                         </h3>
-                        <p class="lh-lg text-white">{!! json_decode($project->description)->{app()->getLocale()} !!}</p>
+                        <div class="lh-lg text-white">{!! json_decode($project->description)->{app()->getLocale()} !!}</div>
                     </div>
                 </div>
             </div>
