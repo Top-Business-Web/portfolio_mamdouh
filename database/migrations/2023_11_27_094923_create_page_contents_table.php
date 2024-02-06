@@ -27,6 +27,7 @@ class CreatePageContentsTable extends Migration
             $table->integer('project_successfully');
             $table->string('image_description', 255);
             $table->json('description_about');
+            $table->json('sub_description_about');
             $table->string('facebook');
             $table->string('twitter');
             $table->string('linkedin');

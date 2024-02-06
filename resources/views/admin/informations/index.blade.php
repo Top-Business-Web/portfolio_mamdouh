@@ -85,7 +85,7 @@
                                                 name="project_successfully">
                                         </div>
                                     </div>
-                                    <div class="container">git push --set-upstream origin humsi
+                                    <div class="container">
                                         <div class="row">
                                             <div class="col-12">
                                                 <label for="name" class="form-control-label"> وصف المالك: </label>
@@ -127,6 +127,18 @@
                                         <div class="col-12" style="text-align: left">
                                             <label for="name" class="form-control-label">: About Us</label>
                                             <textarea class="form-control text-left" id="about_us_en" name="description_about[en]" rows="8">{{ $informations->description_about['en'] }}</textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12" style="text-align: left">
+                                            <label for="name" class="form-control-label">: من نحن الداخلية </label>
+                                            <textarea class="form-control text-left" id="sub_about_us_ar" name="sub_description_about[ar]" rows="8">{{ $informations->sub_description_about['ar'] }}</textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12" style="text-align: left">
+                                            <label for="name" class="form-control-label">: Sub About Us</label>
+                                            <textarea class="form-control text-left" id="sub_about_us_en" name="sub_description_about[en]" rows="8">{{ $informations->sub_description_about['en'] }}</textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -199,6 +211,8 @@
     <script>
         ClassicEditor.create(document.querySelector('#about_us_ar'));
         ClassicEditor.create(document.querySelector('#about_us_en'));
+        ClassicEditor.create(document.querySelector('#sub_about_us_ar'));
+        ClassicEditor.create(document.querySelector('#sub_about_us_en'));
         ClassicEditor.create(document.querySelector('#description_owner_ar'));
         ClassicEditor.create(document.querySelector('#description_owner_en'));
         ClassicEditor.create(document.querySelector('#address'));

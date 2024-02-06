@@ -24,6 +24,7 @@ class PageContent extends Model
         'project_successfully',
         'image_description',
         'description_about',
+        'sub_description_about',
         'facebook',
         'twitter',
         'linkedin',
@@ -35,5 +36,6 @@ class PageContent extends Model
         'name_owner' => 'json',
         'description_owner' => 'json',
         'description_about' => 'json',
+        'sub_description_about' => 'json',
     ];
 }

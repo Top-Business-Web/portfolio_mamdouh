@@ -39,6 +39,7 @@ class PageContentController extends Controller
             'project_successfully',
             'image_description',
             'description_about',
+            'sub_description_about',
             'facebook',
             'twitter',
             'linkedin',

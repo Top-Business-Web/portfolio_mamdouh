@@ -193,7 +193,7 @@
           <button type="button" class="btn-close m-2" data-bs-dismiss="modal" aria-label="Close"></button>
           <div class="modal-body">
               <div>
-                  <p class="lh-lg">{!! json_decode($landingPageData->description_about)->{app()->getLocale()} !!}</p>
+                  <p class="lh-lg">{!! json_decode($landingPageData->sub_description_about)->{app()->getLocale()} !!}</p>
               </div>
           </div>
       </div>
