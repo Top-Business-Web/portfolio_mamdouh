@@ -20,7 +20,7 @@
     </a>
 
     @php
-        $whatsapp = $content->phone;
+        $whatsapp = $content->whatsapp;
     @endphp
 
     <!-- whatsapp -->

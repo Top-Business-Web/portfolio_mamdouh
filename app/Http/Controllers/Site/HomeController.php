@@ -29,7 +29,7 @@ class HomeController extends Controller
     private function getLandingPageData()
     {
         $information = DB::table('page_contents')
-            ->select('id', 'image_owner', 'name_owner', 'email', 'phone', 'address', 'description_owner', 'customers', 'years_experience', 'best_customers', 'project_successfully', 'description_about', 'sub_description_about', 'image_description', 'facebook', 'twitter', 'linkedin', 'instagram', 'tiktok')
+            ->select('id', 'image_owner', 'name_owner', 'email', 'phone', 'address', 'description_owner', 'customers', 'years_experience', 'best_customers', 'project_successfully', 'description_about', 'sub_description_about', 'image_description', 'facebook', 'twitter', 'linkedin', 'instagram', 'tiktok','video_link')
             ->first();
 
         return $information;
