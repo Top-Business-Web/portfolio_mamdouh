@@ -43,7 +43,9 @@ class PageContentController extends Controller
             'facebook',
             'twitter',
             'linkedin',
+            'whatsapp',
             'instagram',
+            'video_link',
             'tiktok',
         )->firstOrFail();
     }

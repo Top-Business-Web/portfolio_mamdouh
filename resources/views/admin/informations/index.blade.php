@@ -60,29 +60,36 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-6">
+                                        <div class="col-md-4">
                                             <label for="customers" class="form-control-label">زبائن: </label>
                                             <input type="number" class="form-control"
                                                 value="{{ $informations->customers }}" name="customers">
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col-md-4">
                                             <label for="years_experience" class="form-control-label">سنوات الخبرة: </label>
                                             <input type="number" class="form-control"
                                                 value="{{ $informations->years_experience }}" name="years_experience">
                                         </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
+                                        <div class="col-md-4">
                                             <label for="best_customers" class="form-control-label">افضل الزبائن: </label>
                                             <input type="number" class="form-control"
                                                 value="{{ $informations->best_customers }}" name="best_customers">
                                         </div>
-                                        <div class="col-md-6">
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
                                             <label for="project_successfully" class="form-control-label">المشاريع الناجحة:
                                             </label>
                                             <input type="number" class="form-control"
                                                 value="{{ $informations->project_successfully }}"
                                                 name="project_successfully">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <label for="project_successfully" class="form-control-label">لينك الفيديو :
+                                            </label>
+                                            <input type="url" class="form-control"
+                                                value="{{ $informations->video_link }}"
+                                                name="video_link">
                                         </div>
                                     </div>
                                     <div class="container">
@@ -180,6 +187,10 @@
                                         <div class="col-6" style="text-align: left">
                                             <label for="name" class="form-control-label"> : Tiktok</label>
                                             <input type="text" value="{{ $informations->tiktok }}" class="form-control text-left" name="tiktok">
+                                        </div>
+                                        <div class="col-6" style="text-align: left">
+                                            <label for="name" class="form-control-label"> : Whatsapp</label>
+                                            <input type="tel" value="{{ $informations->whatsapp }}" class="form-control text-left" name="whatsapp">
                                         </div>
                                     </div>
                                     <div class="row">

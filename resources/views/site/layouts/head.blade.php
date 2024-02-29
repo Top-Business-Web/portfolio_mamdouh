@@ -12,6 +12,8 @@
     <!-- slick -->
     <link rel="stylesheet" href="{{ asset('assets/site/css/slick.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/site/css/slick-theme.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/site/css/modal-video.min.css') }}">
+
 
     @if (app()->getLocale() == 'ar')
         <link rel="stylesheet" href="{{ asset('assets/site/css/style.css') }}">
