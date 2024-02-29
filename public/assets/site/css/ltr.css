@@ -359,6 +359,10 @@ p{
     width: 70px;
     height: 70px;
 }
+.icon-service .test img{
+    width: 70px;
+    height: 70px;
+}
 .text-service p{
     text-align: justify;
     line-height: 1.7;

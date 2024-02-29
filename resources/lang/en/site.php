@@ -29,7 +29,7 @@ return [
     "customers"=> "Customers",
     "why_choose_me?"=> "Why choose me?",
     "why_invest_in_dubai?"=> "Why invest in Dubai?",
-    "our_business"=> "Our business",
+    "our_business"=> "Properties Available",
     "you_can_follow_our_latest_work"=> "You can follow our latest work",
     "contact_us"=> "Contact us",
     "we_can_answer_all_your_concerns_and_provide_all_the_entertainment"=> "We can answer all your concerns and provide all the entertainment",
@@ -39,5 +39,6 @@ return [
     "name"=> "Name",
     "subject"=> "Subject",
     "message"=> "Message",
+    "latest_projects"=> "Latest Projects",
     "all_rights_are_save"=> "All rights are save"
 ];
