@@ -1,7 +1,7 @@
 @extends('site.layout')
 
 @section('content')
-  
+
 <!-- Landing section -->
 <section class="landing">
   <div class="container-fluid">
@@ -212,7 +212,7 @@
               </div>
               <div class="col-md-6 col-12 d-flex justify-content-end">
                   <div>
-                      <a href="#contact" class="btn-start">
+                      <a href="{{ route('projectsIndex') }}" class="btn-start">
                           <span>{{ trans('site.contact') }}</span>
                       </a>
                   </div>
@@ -244,12 +244,12 @@
 @endsection
 
 @section('js')
- 
+
  <script>
       document.addEventListener('DOMContentLoaded', function() {
           // Get all buttons with the class 'btn-project'
           const projectButtons = document.querySelectorAll('.btn-project');
-  
+
           // Add click event listener to each button
           projectButtons.forEach(function(button) {
               button.addEventListener('click', function() {
@@ -260,22 +260,22 @@
                   const projectImages = this.getAttribute('data-project-images');
                   let projectImagesArray = JSON.parse(projectImages);
                   console.log(projectImagesArray[0])
-  
+
                   var divDataP = '<div class="school-img"><img class="img-fluid" src="storage/' + projectImagesArray[0] + '" alt="no image" /></div>';
                   $('.projectModalImage').html(divDataP);
                   var divDataS = ''; // Initialize an empty string to store small slider images
                   for (let i = 0; i < projectImagesArray.length; i++) {
                       divDataS += '<img class="img-fluid" src="storage/' + projectImagesArray[i] +'" alt="no image" />';
                   }
-  
+
                   $('.projectModalSmallImage').html(divDataS);
-  
-                  // Update the modal content with the project details    
+
+                  // Update the modal content with the project details
                   document.getElementById('projectModalTitle').innerText = projectTitle;
                   document.getElementById('projectModalDescription').innerText =
                       projectDescription;
                   // document.getElementById('projectModalImage').src = projectImages;
-  
+
                   // If you're using a modal library, you can trigger the modal here
                   // For example, if you're using Bootstrap:
                   $('#exampleModal2').modal('show');

@@ -19,10 +19,17 @@ class HomeController extends Controller
         return view('site.layouts.index', compact('landingPageData', 'services', 'projects'));
     }
 
+    public function projects()
+    {
+        $landingPageData = $this->getLandingPageData();
+        $projects = Project::get();
+        return view('site.all-projects',compact('projects','landingPageData'));
+    } // end of projects
+
     private function getLandingPageData()
     {
         $information = DB::table('page_contents')
-            ->select('id', 'image_owner', 'name_owner', 'email', 'phone', 'address', 'description_owner', 'customers', 'years_experience', 'best_customers', 'project_successfully', 'description_about','sub_description_about' , 'image_description', 'facebook', 'twitter', 'linkedin', 'instagram', 'tiktok')
+            ->select('id', 'image_owner', 'name_owner', 'email', 'phone', 'address', 'description_owner', 'customers', 'years_experience', 'best_customers', 'project_successfully', 'description_about', 'sub_description_about', 'image_description', 'facebook', 'twitter', 'linkedin', 'instagram', 'tiktok')
             ->first();
 
         return $information;
