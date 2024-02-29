@@ -23,7 +23,7 @@ return [
     "contact" => "تواصل معنا",
     "Hello,_its_me" => "مرحبا, أنا",
     "start_now" => "ابدأ الآن",
-    "start_watching_now" => "ابدأ المشاهدة الان",
+    "start_watching_now" => "  اعرف اكتر عن العقارات",
     "new_projects"=> "مشاريع جديدة",
     "best_customers"=> "أفضل عملاء",
     "years_of_experience"=> "سنوات من الخبرة",
