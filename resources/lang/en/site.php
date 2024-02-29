@@ -22,7 +22,7 @@ return [
     "contact" => "Contact",
     "Hello,_its_me" => "Hello, it's me",
     "start_now" => "Start now",
-    "start_watching_now" => "Start watching now",
+    "start_watching_now" => "know more about real state",
     "new_projects"=> "New projects",
     "best_customers"=> "Best customers",
     "years_of_experience"=> "Years of experience",
