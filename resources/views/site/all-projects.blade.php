@@ -7,9 +7,6 @@
 
 
 
-
-
-
 @endsection
 
 @section('js')
