@@ -30,7 +30,7 @@ return [
     "customers"=> "عملاء",
     "why_choose_me?"=> "لماذا تقوم باختياري؟",
     "why_invest_in_dubai?"=> "لماذا الاستثمار في دبي؟",
-    "our_business"=> "أعمالنا",
+    "our_business"=> "العقارات المتاحة",
     "you_can_follow_our_latest_work"=> "يمكنك متابعة أحدث أعمالنا",
     "contact_us"=> "اتصل بنا",
     "we_can_answer_all_your_concerns_and_provide_all_the_entertainment"=> "يمكننا الرد على جميع اهتماماتك وتوفير جميع التسلية",
@@ -40,5 +40,6 @@ return [
     "name"=> "الاسم",
     "subject"=> "الموضوع",
     "message"=> "الرسالة",
+    "latest_projects"=> "أحدث المشاريع",
     "all_rights_are_save"=> "جميع الحقوق محفوظة"
 ];
