@@ -5,11 +5,6 @@
 
 
 
-
-
-
-
-
 @endsection
 
 @section('js')
