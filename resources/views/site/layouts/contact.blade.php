@@ -73,11 +73,11 @@
                         <li>
                             <a href="{{ $landingPageData->facebook }}" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
                         </li>
-                        <li>
+                        <!-- <li>
                             <a href="{{ $landingPageData->twitter }}" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                        </li>
+                        </li> -->
                         <li>
-                            <a href="{{ $landingPageData->linkedin }}" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="{{ $landingPageData->linkedin }}" target="_blank"><i class="fa-brands fa-youtube"></i></a>
                         </li>
                         <li>
                             <a href="{{ $landingPageData->instagram }}" target="_blank"><i class="fa-brands fa-instagram"></i></a>
